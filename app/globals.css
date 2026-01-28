@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import 'lenis/dist/lenis.css';
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #AEA797;
+  --secondary: #2A2927;
+  --tertiary: #6b6256;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --font-inter: var(--font-inter);
+  --breakpoint-xl: 106rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+    --primary: #AEA797;
+    --secondary: #2A2927;
+    --tertiary: #6b6256;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-inter);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-editorial);
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+.has-x-large-font-size {
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
